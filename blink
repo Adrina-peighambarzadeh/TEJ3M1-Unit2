@@ -1,15 +1,22 @@
-// Adrina-peighambarzadeh
-// Feb 11
+/*Blink with variable
+ * 
+ * Turns an LED on for second, then off one second, repeatedly.
+ * But the interval increases each time by 1 more seconds.
+ * 
+ * created on Feb 2026
+ * by Adrina.Peighambarzadeh
+ */
 
+int pin5 = 5;
+ 
 void setup() { 
     // initialize digital pin LED_BUILTIN as an output.
-    pinMode(LED_BUILTIN, OUTPUT); 
+    pinMode(pin5, OUTPUT); 
 } 
 
-// the loop function runs over and over again forever 
 void loop() { 
-        digitalWrite(LED_BUILTIN, HIGH);     // turn the LED on (HIGH is the voltage level)
-        delay(1000);                         // wait for a second
-        digitalWrite(LED_BUILTIN, LOW);      // turn the LED off by making the voltage LOW   
-        delay(1000);                        // wait for a second
-}  
+    digitalWrite(pin5, HIGH);     // turn the LED on (HIGH is the voltage level)
+    delay(1000);                    // wait for a second
+    digitalWrite(pin5, LOW);      // turn the LED off by making the voltage LOW   
+    delay(1000);                         // wait for a second
+}
