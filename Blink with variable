@@ -1,24 +1,58 @@
-/*Blink with variable
- * 
- * Turns an LED on for second, then off one second, repeatedly.
- * But the interval increases each time by 1 more seconds.
- * 
- * created on Feb 2026
- * by Adrina.Peighambarzadeh
- */
+/*
+Created by: Adrina Peighambarzadeh
+Created on: Mar 2026
 
-int blinkTime = 1000;  //set variable to 1000
- 
-void setup() { 
-    // initialize digital pin LED_BUILTIN as an output.
-    pinMode(LED_BUILTIN, OUTPUT); 
-} 
+RGB LED cycles through different colors
+*/
 
-void loop() { 
-    digitalWrite(LED_BUILTIN, HIGH);     // turn the LED on (HIGH is the voltage level)
-    delay(blinkTime);                    // wait for a second
-    digitalWrite(LED_BUILTIN, LOW);      // turn the LED off by making the voltage LOW   
-    delay(1000);                         // wait for a second
+void setup()
+{
+  pinMode(11, OUTPUT); // Red
+  pinMode(12, OUTPUT); // Green
+  pinMode(13, OUTPUT); // Blue
+}
 
-    blinkTime = blinkTime + 1000;        // add 1 seconf (or 1000) to the variable blinkTime
+void loop()
+{
+  // RED
+  digitalWrite(11, HIGH);
+  digitalWrite(12, LOW);
+  digitalWrite(13, LOW);
+  delay(1000);
+
+  // GREEN
+  digitalWrite(11, LOW);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, LOW);
+  delay(1000);
+
+  // BLUE
+  digitalWrite(11, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(13, HIGH);
+  delay(1000);
+
+  // RED + GREEN (YELLOW)
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, LOW);
+  delay(1000);
+
+  // GREEN + BLUE (CYAN)
+  digitalWrite(11, LOW);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, HIGH);
+  delay(1000);
+
+  // BLUE + RED (MAGENTA)
+  digitalWrite(11, HIGH);
+  digitalWrite(12, LOW);
+  digitalWrite(13, HIGH);
+  delay(1000);
+
+  // RED + GREEN + BLUE (WHITE)
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, HIGH);
+  delay(1000);
 }
